@@ -76,6 +76,7 @@ mixin {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    // ── AzureLib ───────────────────────────────────────────────────────────
     maven {
         name = "AzureDoom Mods"
         url = "https://maven.azuredoom.com/mods"
@@ -84,9 +85,10 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    implementation fg.deobf("mod.azure.azurelib:azurelib-neo-${minecraft_version}:3.1.12")
+    // ── AzureLib ───────────────────────────────────────────────────────────
+    implementation fg.deobf("mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}")
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 tasks.named('processResources', ProcessResources).configure {

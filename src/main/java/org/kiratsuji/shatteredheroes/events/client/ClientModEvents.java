@@ -1,0 +1,21 @@
+package org.kiratsuji.shatteredheroes.events.client;
+
+
+import mod.azure.azurelib.render.item.AzItemRendererRegistry;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import org.kiratsuji.shatteredheroes.Shatteredheroes;
+import org.kiratsuji.shatteredheroes.item.KatanaRenderer;
+import org.kiratsuji.shatteredheroes.registries.ShatteredHeroesItems;
+
+@Mod.EventBusSubscriber(modid = Shatteredheroes.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+public class ClientModEvents {
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event){
+        event.enqueueWork(()->{
+            AzItemRendererRegistry.register(KatanaRenderer::new, ShatteredHeroesItems.KATANA.get());
+        });
+    }
+}

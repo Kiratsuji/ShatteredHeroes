@@ -1,6 +1,8 @@
 package org.kiratsuji.shatteredheroes;
 
 import com.mojang.logging.LogUtils;
+import mod.azure.azurelib.render.item.AzItemModelRenderer;
+import mod.azure.azurelib.render.item.AzItemRendererRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -27,6 +29,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.kiratsuji.shatteredheroes.item.KatanaRenderer;
+import org.kiratsuji.shatteredheroes.registries.ShatteredHeroesItems;
 import org.slf4j.Logger;
 
 @Mod(Shatteredheroes.MODID)
@@ -39,6 +43,7 @@ public class Shatteredheroes {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
+        ShatteredHeroesItems.ITEMS.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
