@@ -1,4 +1,4 @@
-package org.kiratsuji.shatteredheroes.item;
+package org.kiratsuji.shatteredheroes.client.renderer;
 
 import mod.azure.azurelib.render.item.AzItemRenderer;
 import mod.azure.azurelib.render.item.AzItemRendererConfig;
