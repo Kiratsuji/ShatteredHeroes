@@ -9,7 +9,7 @@
     "thirdperson_righthand": {
       "translation": [
         0,
-        -8.75,
+        -6.75,
         0.25
       ],
       "scale": [
@@ -21,7 +21,7 @@
     "thirdperson_lefthand": {
       "translation": [
         0,
-        -8.75,
+        -86.75,
         0.25
       ],
       "scale": [
@@ -38,7 +38,7 @@
       ],
       "translation": [
         1.75,
-        -8.75,
+        -6.75,
         -0.25
       ],
       "scale": [
@@ -55,7 +55,7 @@
       ],
       "translation": [
         0,
-        -8.75,
+        -6.75,
         0
       ],
       "scale": [
@@ -88,8 +88,8 @@
         -139.86
       ],
       "translation": [
-        -2.25,
-        -12,
+        -5,
+        -5,
         0
       ],
       "scale": [
