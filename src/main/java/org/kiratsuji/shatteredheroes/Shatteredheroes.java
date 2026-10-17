@@ -6,6 +6,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.kiratsuji.shatteredheroes.registries.ShatteredHeroesEntities;
 import org.kiratsuji.shatteredheroes.registries.ShatteredHeroesItems;
+import org.kiratsuji.shatteredheroes.registries.ShatteredHerosCreativeTabs;
 
 @Mod(Shatteredheroes.MODID)
 public class Shatteredheroes {
@@ -18,6 +19,7 @@ public class Shatteredheroes {
 
         modEventBus.addListener(this::commonSetup);
         ShatteredHeroesItems.ITEMS.register(modEventBus);
+        ShatteredHerosCreativeTabs.CREATIVE_TABS.register(modEventBus);
         ShatteredHeroesEntities.ENTITIES.register(modEventBus);
     }
 
