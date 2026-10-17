@@ -1,0 +1,7 @@
+{
+  "type": "shatteredheroes:dojo",
+  "biomes": "#shatteredheroes:has_structure/dojo",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin"
+}
