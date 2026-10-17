@@ -9,18 +9,18 @@ import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraft.client.renderer.entity.layers.ItemInHandLayer;
 import net.minecraft.resources.ResourceLocation;
 import org.kiratsuji.shatteredheroes.Shatteredheroes;
-import org.kiratsuji.shatteredheroes.entity.custom.SwordsmanMasterEntity;
+import org.kiratsuji.shatteredheroes.entity.custom.DojoMasterEntity;
 
-public class SwordsmanMasterRenderer extends MobRenderer<SwordsmanMasterEntity, HumanoidModel<SwordsmanMasterEntity>> {
-    public static final ModelLayerLocation SWORDSMAN_MASTER_LAYER = new ModelLayerLocation(
-            new ResourceLocation(Shatteredheroes.MODID, "swordsman_master"),"main");
+public class DojoMasterRenderer extends MobRenderer<DojoMasterEntity, HumanoidModel<DojoMasterEntity>> {
+    public static final ModelLayerLocation DOJO_MASTER_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Shatteredheroes.MODID, "dojo_master"),"main");
 
     private static final ResourceLocation TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(Shatteredheroes.MODID, "textures/entity/swordsman_master.png");
+            ResourceLocation.fromNamespaceAndPath(Shatteredheroes.MODID, "textures/entity/dojo_master.png");
 
 
-    public SwordsmanMasterRenderer(EntityRendererProvider.Context context) {
-        super(context, new HumanoidModel<>(context.bakeLayer(SWORDSMAN_MASTER_LAYER)),0.5F);
+    public DojoMasterRenderer(EntityRendererProvider.Context context) {
+        super(context, new HumanoidModel<>(context.bakeLayer(DOJO_MASTER_LAYER)),0.5F);
 
         this.addLayer(new ItemInHandLayer<>(this, context.getItemInHandRenderer()));
         this.addLayer(new HumanoidArmorLayer<>(this,
@@ -30,7 +30,7 @@ public class SwordsmanMasterRenderer extends MobRenderer<SwordsmanMasterEntity, 
     }
 
     @Override
-    public ResourceLocation getTextureLocation(SwordsmanMasterEntity entity) {
+    public ResourceLocation getTextureLocation(DojoMasterEntity entity) {
         return TEXTURE;
     }
 }

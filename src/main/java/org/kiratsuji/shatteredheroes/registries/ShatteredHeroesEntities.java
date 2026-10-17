@@ -6,13 +6,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.kiratsuji.shatteredheroes.Shatteredheroes;
-import org.kiratsuji.shatteredheroes.entity.custom.SwordsmanMasterEntity;
+import org.kiratsuji.shatteredheroes.entity.custom.DojoMasterEntity;
 
 public class ShatteredHeroesEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Shatteredheroes.MODID);
 
-    public static final RegistryObject<EntityType<SwordsmanMasterEntity>> SWORDSMAN_MASTER = ENTITIES.register("swordsman_master",
-            ()-> EntityType.Builder.of(SwordsmanMasterEntity::new, MobCategory.CREATURE)
+    public static final RegistryObject<EntityType<DojoMasterEntity>> DOJO_MASTER = ENTITIES.register("dojo_master",
+            ()-> EntityType.Builder.of(DojoMasterEntity::new, MobCategory.CREATURE)
                     .sized(0.6f, 1.95f)
-                    .build("swordsman_master"));
+                    .build("dojo_master"));
 }

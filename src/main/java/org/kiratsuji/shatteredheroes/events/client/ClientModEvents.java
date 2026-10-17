@@ -14,7 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import org.kiratsuji.shatteredheroes.Shatteredheroes;
 import org.kiratsuji.shatteredheroes.client.renderer.KatanaRenderer;
 import org.kiratsuji.shatteredheroes.client.renderer.MasterKimonoRenderer;
-import org.kiratsuji.shatteredheroes.client.renderer.SwordsmanMasterRenderer;
+import org.kiratsuji.shatteredheroes.client.renderer.DojoMasterRenderer;
 import org.kiratsuji.shatteredheroes.registries.ShatteredHeroesEntities;
 import org.kiratsuji.shatteredheroes.registries.ShatteredHeroesItems;
 
@@ -36,12 +36,12 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void onRegisterLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(SwordsmanMasterRenderer.SWORDSMAN_MASTER_LAYER,
+        event.registerLayerDefinition(DojoMasterRenderer.DOJO_MASTER_LAYER,
                 () -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0), 64, 64));
     }
 
     @SubscribeEvent
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(ShatteredHeroesEntities.SWORDSMAN_MASTER.get(), SwordsmanMasterRenderer::new);
+        event.registerEntityRenderer(ShatteredHeroesEntities.DOJO_MASTER.get(), DojoMasterRenderer::new);
     }
 }

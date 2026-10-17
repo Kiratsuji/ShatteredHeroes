@@ -15,8 +15,8 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import org.jetbrains.annotations.Nullable;
 import org.kiratsuji.shatteredheroes.registries.ShatteredHeroesItems;
 
-public class SwordsmanMasterEntity extends PathfinderMob {
-    public SwordsmanMasterEntity(EntityType<? extends SwordsmanMasterEntity> entityType, Level level) {
+public class DojoMasterEntity extends PathfinderMob {
+    public DojoMasterEntity(EntityType<? extends DojoMasterEntity> entityType, Level level) {
         super(entityType, level);
         this.setDropChance(EquipmentSlot.MAINHAND, 0.0f);
 
